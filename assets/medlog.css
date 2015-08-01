@@ -1,0 +1,65 @@
+h1 {
+    font-family:  "Lucida Grande", Arial, sans-serif;
+}
+
+body {
+    font-family:  sans-serif;
+}
+
+#content {
+    margin-left:  30px;
+    /* border-top:  1px dashed; */
+}
+
+#site-info {
+    /* margin-left: -30px; */
+    border-bottom:  1px dashed;
+    font-size: small;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+/*#entries {
+    border:  1px dotted;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:  20px;
+    margin-bottom:  10px;
+    padding:  15px;
+}*/
+
+table, th, td {
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+table {
+  border-top: none !important;
+}
+table, td {
+  border: 1px rgb(61, 92, 245) solid;
+  border-collapse: collapse;
+  border-top: none;
+}
+th {
+  background-color: rgb(74, 138, 205);
+  color: white;
+}
+td {
+  background-color: rgb(210, 227, 240);
+}
+
+
+#links {
+  border-top: 1px dotted black;
+  padding-top: 20px;
+  text-align: center;
+  margin-left: -20px;
+}
+#links li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+  font-size: small;
+}
