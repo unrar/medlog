@@ -17,15 +17,15 @@ connection lines in `include/usercontrol.php` and `include/entries.php`.
 
 Home page:
 
-[Home page](http://i.imgur.com/ZGQH9IS.png)
+![Home page](http://i.imgur.com/ZGQH9IS.png)
 
 My journal (don't take it too seriously):
 
-[My Journal](http://i.imgur.com/LUvPrCR.png)
+![My Journal](http://i.imgur.com/LUvPrCR.png)
 
 Editing an entry:
 
-[Editing an entry](http://i.imgur.com/b0Bar0k.png)
+![Editing an entry](http://i.imgur.com/b0Bar0k.png)
 
 ## TODO
 * Set MedLog up in a public hosting.
