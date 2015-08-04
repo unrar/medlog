@@ -15,6 +15,15 @@ connection lines in `include/usercontrol.php` and `include/entries.php`.
 
 **(NEW)** Now you can generate a trip report! Then, you can export it to an HTML or TXT file.
 
+## How to install?
+You'll just need a simple HTTP, PHP and MySQL server - my choice for testing and developing is usually LAMP. 
+
+1. Clone or HTTP download this project from GitHub to your `htdocs` directory: `$ git clone https://github.com/unrar/medlog.git` 
+
+2. Create a `medlog` database and run the queries in `medlog.sql` on it. This can be done via SQL command line or PHPMyAdmin.
+
+3. Edit the `include/entries.php` and `include/usercontrol.php` lines regarding the MySQL connection and modify them to suit your server.
+
 ## Screenshots
 
 Home page:
