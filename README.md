@@ -3,6 +3,8 @@
 MedLog is a PHP application that, alongside a MySQL database, allows several users
 to register and have their own, private drug journal.
 
+MedLog is now up and running [here](http://medlog.byethost12.com)!
+
 This can be used for logging all ingested drugs, both legal or illegal. It has
 many purposes, the main ones being:
 
@@ -51,7 +53,7 @@ Downloaded TXT trip report:
 ![TXT Trip](http://i.imgur.com/g1PXaHR.png)
 
 ## TODO
-* Set MedLog up in a public hosting.
+* ~~Set MedLog up in a public hosting.~~ (**It's up now!**)
 
 * Improve CSS.
 
