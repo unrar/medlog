@@ -13,6 +13,8 @@ many purposes, the main ones being:
 You can easily set-up your own instance of MedLog by modifying the MySQLi
 connection lines in `include/usercontrol.php` and `include/entries.php`.
 
+**(NEW)** Now you can generate a trip report! Then, you can export it to an HTML or TXT file.
+
 ## Screenshots
 
 Home page:
@@ -27,9 +29,21 @@ Editing an entry:
 
 ![Editing an entry](http://i.imgur.com/b0Bar0k.png)
 
+Selecting entries for a trip report:
+
+![Trip selection](http://i.imgur.com/d8dNQ7V.png)
+
+Downloaded HTML trip report:
+
+![HTML Trip](http://i.imgur.com/3taHFuX.png)
+
+Downloaded TXT trip report:
+
+![TXT Trip](http://i.imgur.com/g1PXaHR.png)
+
 ## TODO
 * Set MedLog up in a public hosting.
 
 * Improve CSS.
 
-* Add option to create a trip report (all entries from a given date).
+* ~~Add option to create a trip report (all entries from a given date)~~ (**Added on v0.2!**).

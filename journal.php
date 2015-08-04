@@ -20,17 +20,19 @@ $dry->build_header("My Journal");
 </div>
 <div id="content">
   <?php
-  $dry->build_table_header();
   $res = $e->FindEntries();
   if ($res != false)
   {
-    $rows = [];
+    $dry->build_table_header();
+    //$rows = [];
     while ($row = $res->fetch_assoc())
     {
-      array_push($rows, $row);
+      //array_push($rows, $row);
+      $dry->build_table_row($row);
     }
-    $rows = array_reverse($rows);
-    $dry->build_table_rows($rows);
+    echo "</table>";
+    //$rows = array_reverse($rows);
+    //$dry->build_table_rows($rows);
   }
 $dry->build_links();
 $dry->build_footer();

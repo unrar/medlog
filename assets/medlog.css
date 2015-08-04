@@ -51,7 +51,7 @@ td {
 }
 
 
-#links {
+#links, .footer {
   border-top: 1px dotted black;
   padding-top: 20px;
   text-align: center;
@@ -61,5 +61,8 @@ td {
   display: inline;
   list-style-type: none;
   padding-right: 20px;
+  font-size: small;
+}
+.footer {
   font-size: small;
 }

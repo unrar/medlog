@@ -84,6 +84,21 @@ $dry->build_header("Manage");
       </fieldset>
     </form>
     <?php
+  } else if ($op == "trip")
+  {
+    ?>
+    <h2>Generate a trip report</h2>
+    <p class="warning">To generate a trip report, specify the trip's date and then select all the entries
+      to be included in the report.</p>
+      <form id="gen-trip" action="trip.php" method="POST">
+        <fieldset>
+          <label for="date">Trip date: </label>
+          <input type="date" name="date" />
+          <input type="hidden" name="done" value="no" />
+          <input type="submit" value="Submit" />
+        </fieldset>
+      </form>
+    <?php
   }
 echo "</div>";
 $dry->build_links();

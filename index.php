@@ -57,17 +57,19 @@ if (!empty($_GET["message"])) {
     if ($res != false) {
     $dry->build_table_header();
 
-      $rows = []; // Holds the 5 last rows of the user
+      //$rows = []; Holds the 5 last rows of the user
       $count = 0;
       while (($row = $res->fetch_assoc()) && ($count < 5))
       {
-        array_push($rows, $row);
+        //array_push($rows, $row);
+        $dry->build_table_row($row);
         $count++;
       }
+      echo "</table>";
       // Reverse the rows from newer to older
-      $rows = array_reverse($rows);
+      // $rows = array_reverse($rows);
       // Iterate over those rows
-      $dry->build_table_rows($rows);
+      // $dry->build_table_rows($rows);
     }
     ?>
     <!-- End dynamic PHP content -->
