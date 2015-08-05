@@ -1,5 +1,6 @@
 <?php
 /* Controller for managing MedLog's entries */
+require_once("config.php");
 class EntriesController
 {
 
@@ -7,15 +8,19 @@ class EntriesController
   var $connection;
   var $tablename;
   var $username;
+  var $s;
 
   /* Constructor */
   function EntriesController($username)
   {
+    $this->s = new Settings();
+
     // Set properties
     $this->username = $username;
     $this->tablename = "entries";
     // Connect to the database
-    $conn = new mysqli("localhost", "root", "", "medlog");
+    $conn = new mysqli($this->s->config["sqlhost"], $this->s->config["sqluser"], 
+                       $this->s->config["sqlpassword"], $this->s->config["database"]);
     if ($conn->connect_error)
     {
       $this->HandleError("Unable to connect to the database.");

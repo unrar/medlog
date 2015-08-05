@@ -1,18 +1,22 @@
 <?php
-
+// Import config
 /* Class that control users: registration, logins, cookies... */
-
+require_once("config.php");
 class UserControl {
 
     /* Properties */
     var $connection;
     var $tablename;
     var $rand_key;
+    var $s;
 
     /* Initialize */
     function UserControl() {
+        $this->s = new Settings();
+
         $this->tablename = "users";
-        $this->rand_key = "0iQx5oBk66oVZep";
+        //$this->rand_key = "0iQx5oBk66oVZep";
+        $this->rand_key = $this->s->config["randkey"];
     }
 
 
@@ -26,12 +30,9 @@ class UserControl {
 
     function DBLogin()
     {
-        $servname = "localhost";
-        $usname = "medlog";
-        $dbpwd = "medplus";
-        $dbname = "medlog";
 
-        $conn = new mysqli("localhost", "root", "", "medlog");
+        $conn = new mysqli($this->s->config["sqlhost"], $this->s->config["sqluser"],
+                           $this->s->config["sqlpassword"], $this->s->config["database"]);
         if ($conn->connect_error)
         {
             return false;

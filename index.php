@@ -7,6 +7,9 @@ require_once("./include/entries.php");
 require_once("./include/static.php");
 $u = new UserControl();
 $dry = new DRYHelper();
+
+// Check login before sending headers
+$checklogin = $u->CheckLogin();
 $dry->build_header();
 if (!empty($_GET["message"])) {
   ?>
@@ -22,7 +25,7 @@ if (!empty($_GET["message"])) {
 <div id="content">
   <?php
   /* Check if the user has already logged in */
-  if (!$u->CheckLogin()) {
+  if (!$checklogin) {
 
     /* Log-in form */
   ?>

@@ -1,7 +1,18 @@
 <?php
 /* Helper functions for other files! DRY module. */
+require_once("config.php");
 class DRYHelper
 {
+
+  var $s;
+
+  // Constructor
+  function DRYHelper()
+  {
+    $this->s = new Settings();
+  }
+
+
   function build_links()
   {
     ?>
@@ -21,16 +32,16 @@ class DRYHelper
   {
     if ($title == null)
     {
-      $title = "MedLog";
+      $title = $this->s->config["sitename"];
     } else {
-      $title = "MedLog - $title";
+      $title = $this->s->config["sitename"] . " - $title";
     }
     ?>
     <!DOCTYPE html>
     <html>
     <head>
       <title><?php echo $title; ?></title>
-      <link rel="stylesheet" type="text/css" href="http://medlog.io/assets/medlog.css" />
+      <link rel="stylesheet" type="text/css" href="<?php echo $this->s->config["siteurl"]; ?>/assets/medlog.css" />
     </head>
     <body>
     <?php

@@ -12,8 +12,8 @@ many purposes, the main ones being:
 
 * Harm reduction - elaborate trip reports, etc.
 
-You can easily set-up your own instance of MedLog by modifying the MySQLi
-connection lines in `include/usercontrol.php` and `include/entries.php`.
+**(NEW)** As of v0.3, you only have to modify the config file in `include/config.php` with the data
+of your site and server.
 
 **(NEW)** Now you can generate a trip report! Then, you can export it to an HTML or TXT file.
 
@@ -24,7 +24,7 @@ You'll just need a simple HTTP, PHP and MySQL server - my choice for testing and
 
 2. Create a `medlog` database and run the queries in `medlog.sql` on it. This can be done via SQL command line or PHPMyAdmin.
 
-3. Edit the `include/entries.php` and `include/usercontrol.php` lines regarding the MySQL connection and modify them to suit your server.
+3. Edit the `include/config.php` file. Basically you need to change the details of your SQL server and your site.
 
 ## Screenshots
 
