@@ -31,17 +31,17 @@ if (!empty($_GET["message"])) {
   ?>
   <div id="login-area">
     <p>Please, log in to use our web logging service.</p>
-    <form id="login" action="login.php" method="POST">
+    <form id="login" action="login.php" method="POST" data-parsley-validate>
       <fieldset>
         <input type='hidden' name='submitted' id='submitted' value='1'/>
         <label for="username">Username: </label>
-        <input type="text" name="username" id="username" />
+        <input type="text" name="username" id="username" required/>
         <label for="password">Password: </label>
-        <input type="password" name="password" id="password" />
+        <input type="password" name="password" id="password" required/>
         <input type="submit" name="Submit" value="Submit" />
       </fieldset>
     </form>
-    <p>If you don't own an account yet, <a href="register.php?do=show_form">register now!</a></p>
+    <p>If you don't own an account yet, <a href="register.php">register now!</a></p>
   </div>
   <?php
   }
@@ -83,4 +83,5 @@ if (!empty($_GET["message"])) {
   }
   ?>
 </div>
+<script>
 <?php $dry->build_footer(); ?>

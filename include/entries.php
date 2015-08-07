@@ -11,7 +11,7 @@ class EntriesController
   var $s;
 
   /* Constructor */
-  function EntriesController($username)
+  function __construct($username)
   {
     $this->s = new Settings();
 
@@ -80,6 +80,7 @@ class EntriesController
     if (!$result)
     {
       $this->HandleError("Error while adding entry: " . $this->connection->error);
+      return false;
     } else {
       return $result;
     }

@@ -66,3 +66,31 @@ td {
 .footer {
   font-size: small;
 }
+
+
+/* Parsley */
+.parsley-errors-list {
+  display: inline;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+.parsley-errors-list li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+  font-size: small;
+  border: 1px dashed red;
+  padding: 5px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+/* AJAX */
+#incoming {
+  display: none;
+  border: 1px dashed black;
+  padding: 5px;
+  margin-top: 15px;
+}

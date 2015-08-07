@@ -7,41 +7,44 @@ $dry->build_header("Registration");
  ?>
  <h1>Registration</h1>
   <div id="content">
-<?php
-if (!empty($_POST["username"]) && !empty($_POST["password"]) && !empty($_POST["email"]) && !empty($_POST["realname"]) && empty($_GET["do"]))
-{
-  $reg_ok = $u->registerUser($_POST["username"], $_POST["password"], $_POST["email"], $_POST["realname"]);
-  if ($reg_ok) {
-    echo "<p class=\"reg-success\">Registration completed correctly! <a href=\"index.php\">Go back to main page</a>.</p>";
-  }
-}
-else if ($_GET["do"] == "show_form")
-{
-  ?>
-    <form id="reg-form" action="register.php" method="POST">
+  <!-- File-specific script -->
+  <script>
+  // Main function
+    $(document).ready(function() {
+      // Validate the form
+      mjm.setForm("#reg-form");
+      mjm.watchForm();
+    });
+  </script>
+
+  <!-- /File-specific script -->
+    <form id="reg-form">
       <fieldset>
         <label for="username">Username: </label>
-        <input type="text" name="username" />
+        <input type="text" id="username" name="username" required min-length="3"/>
         <br />
 
         <label for="password">Password: </label>
-        <input type="password" name="password" />
+        <input type="password" id="password" name="password" required min-length="3"/>
         <br />
 
         <label for="email">E-mail: </label>
-        <input type="text" name="email" />
+        <input type="text" name="email" id="email" required email="true"/>
         <br />
 
         <label for="realname">Real name: </label>
-        <input type="text" name="realname" />
+        <input type="text" name="realname" id="realname" required min-length="3"/>
         <br />
 
-        <input type="submit" value="Submit" />
+        <input type="hidden" name="op" value="reg" />
+        <input type="submit" id="submit-btn" value="Submit"/>
       </fieldset>
     </form>
-  <?php
-}
- ?>
-    </div>
-  </body>
-</html>
+    <div id="incoming"></div>
+  </div>
+
+<?php
+  $dry->build_links();
+  $dry->build_footer();
+?>
+

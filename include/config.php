@@ -5,7 +5,7 @@ class Settings
 {
   // MySQL configuration
   var $config;
-  function Settings()
+  function __construct()
   {
    $this->config["database"] = "medlog";     // SQL Database name
    $this->config["sqlhost"] = "localhost";   // SQL Host name

@@ -11,7 +11,7 @@ class UserControl {
     var $s;
 
     /* Initialize */
-    function UserControl() {
+    function __construct() {
         $this->s = new Settings();
 
         $this->tablename = "users";
@@ -90,7 +90,9 @@ class UserControl {
     /* Helper functions */
     function CheckLogin()
     {
-         session_start();
+        if(!isset($_SESSION)){
+            session_start();
+        }
 
          $sessionvar = $this->GetLoginSessionVar();
 
@@ -140,7 +142,6 @@ class UserControl {
     function registerUser($username, $password, $email, $realname)
     {
       if ($this->user_exists($username)) {
-        $this->HandleError("Username $username already exists.");
         return false;
       }
       $this->DBLogin();

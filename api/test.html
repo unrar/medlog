@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Debug</title>
+  <link rel="stylesheet" type="text/css" href="http://medlog.io/assets/medlog.css" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+  <script type="text/javascript" src="//medlog.io/assets/js_config.php"></script>
+  <script type="text/javascript" src="//medlog.io/assets/medlog.js"></script>
+</head>
+<body>
+  <script>
+  // Main function
+  $(document).ready(function() {
+    mjm.setForm("#debug-form");
+    mjm.watchForm();
+  });
+  </script>
+  <h1>Debug</h1>
+  <form id="debug-form">
+    Enter your name here please I mean c'mon:
+    <input type="text" name="name" required /><br />
+    <input type="radio" name="wot" value="work" checked /> Maybe it'll work
+    <input type="radio" name="wot" value="not" /> Maybe it won't
+    <input type="hidden" name="op" value="debug" /><br />
+    <input type="submit" value="Submit" />
+  </form>
+  <div id="incoming"></div>
+</body>
+</html>

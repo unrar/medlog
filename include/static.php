@@ -7,7 +7,7 @@ class DRYHelper
   var $s;
 
   // Constructor
-  function DRYHelper()
+  function __construct()
   {
     $this->s = new Settings();
   }
@@ -42,6 +42,11 @@ class DRYHelper
     <head>
       <title><?php echo $title; ?></title>
       <link rel="stylesheet" type="text/css" href="<?php echo $this->s->config["siteurl"]; ?>/assets/medlog.css" />
+      <!-- Scripts -->
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+      <script type="text/javascript" src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+      <script type="text/javascript" src="<?php echo $this->s->config["siteurl"]; ?>/assets/js_config.php"></script>
+      <script type="text/javascript" src="<?php echo $this->s->config["siteurl"]; ?>/assets/medlog.js"></script>
     </head>
     <body>
     <?php

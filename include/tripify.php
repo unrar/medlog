@@ -10,7 +10,7 @@ class Tripify
   var $user;
 
   // Constructor
-  function Tripify($user, $ids)
+  function __construct($user, $ids)
   {
     $this->user = $user;
     $this->ids = $ids;
