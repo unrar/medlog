@@ -58,3 +58,11 @@ Downloaded TXT trip report:
 * Improve CSS.
 
 * ~~Add option to create a trip report (all entries from a given date)~~ (**Added on v0.2!**).
+
+* ~~Add AJAX to the Manage module~~ (**Added on v1.0!**)
+
+* ~~Create an API~~ (**Created mAPI on v1.0!**)
+
+* Add AJAX to the Tripify module.
+
+* Manage trip reports through API.
